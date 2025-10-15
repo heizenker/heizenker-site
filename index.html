@@ -1,18 +1,142 @@
 <!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Heizenker — кофемашины</title>
-<meta name="description" content="Heizenker — кофе как в лучшей кофейне, у вас дома. Скоро запуск.">
+<title>Heizenker — кофемашины для дома</title>
+<meta name="description" content="Heizenker — кофе как в лучшей кофейне, у вас дома. Премиальные кофемашины, гарантия 2 года.">
+<link rel="icon" href="favicon.ico">
 <style>
-  body{margin:0;min-height:100dvh;display:grid;place-items:center;
-  background:radial-gradient(1200px 700px at 80% -10%, #213243 0%, #0b1116 50%);color:#e8eef4;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial}
-  .card{max-width:920px;padding:40px;border-radius:18px;border:1px solid rgba(255,255,255,.1);
-  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
-  h1{margin:0 0 10px;font-size:40px;line-height:1.1;letter-spacing:-.02em}
-  p{opacity:.85}
-  a.btn{display:inline-block;margin-top:14px;padding:12px 16px;border-radius:12px;background:#2bd17e;color:#061018;text-decoration:none;font-weight:700}
-</style></head><body><main class="card">
-<h1>Heizenker — кофе дома как в кофейне</h1>
-<p>Премиальные кофемашины Heizenker. Скоро каталог и покупка на Wildberries.</p>
-<a class="btn" href="#" target="_blank" rel="noopener">Купить на Wildberries</a>
-</main></body></html>
+  :root{--bg:#0b1116;--card:#101820;--txt:#e8eef4;--muted:#9fb0be;--accent:#2bd17e}
+  *{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;background:
+  radial-gradient(1200px 700px at 80% -10%, #213243 0%, #0b1116 50%);color:var(--txt)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background:rgba(16,24,32,.5);border-bottom:1px solid rgba(255,255,255,.08);z-index:10}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{display:flex;align-items:center;gap:10px}
+  .emblem{width:34px;height:34px;border-radius:8px;background:linear-gradient(145deg,#2bd17e,#19995b);display:grid;place-items:center;font-weight:900;color:#0b1116}
+  nav a{color:#cfe3f2;text-decoration:none;margin:0 10px;opacity:.9}nav a:hover{opacity:1}
+  .hero{padding:64px 0}
+  h1{font-size:44px;line-height:1.07;margin:0 0 12px;letter-spacing:-.02em}
+  p.lead{color:#cfe3f2;opacity:.9;max-width:720px;margin:0 0 18px}
+  .btn{display:inline-block;background:var(--accent);color:#081016;padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none}
+  .btn.ghost{background:transparent;color:#e8eef4;border:1px solid rgba(255,255,255,.18)}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{border:1px solid rgba(255,255,255,.10);border-radius:16px;background:rgba(255,255,255,.03);padding:18px}
+  .card h3{margin:6px 0 4px}
+  section{padding:36px 0}
+  footer{border-top:1px solid rgba(255,255,255,.08);margin-top:36px}
+  small, .muted{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap row">
+    <div class="logo"><div class="emblem">Э</div><strong>HEIZENKER</strong></div>
+    <nav>
+      <a href="#catalog">Каталог</a>
+      <a href="#benefits">Преимущества</a>
+      <a href="#about">О бренде</a>
+      <a href="#warranty">Гарантия</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Кофе как в лучшей кофейне —<br>у вас дома</h1>
+    <p class="lead">Премиальные кофемашины Heizenker. Автоматическое приготовление эспрессо и капучино, тихая работа, современный дизайн и гарантия 2 года.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn" href="#catalog">Смотреть каталог</a>
+      <!-- ВСТАВЬ ССЫЛКУ НА СВОЮ КАРТОЧКУ WB -->
+      <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <h2>Преимущества</h2>
+    <div class="grid g3">
+      <div class="card"><strong>☕ Автоэспрессо и капучино</strong><br><span class="muted">Один клик — идеальный напиток</span></div>
+      <div class="card"><strong>🧼 Самоочистка</strong><br><span class="muted">Минимум ухода — максимум ресурса</span></div>
+      <div class="card"><strong>🔇 Тихая работа</strong><br><span class="muted">Комфортное утро без шума</span></div>
+      <div class="card"><strong>🎛️ Индивидуальные настройки</strong><br><span class="muted">Температура, крепость, помол</span></div>
+      <div class="card"><strong>🛡️ Гарантия 24 мес</strong><br><span class="muted">Официальная поддержка</span></div>
+      <div class="card"><strong>🇩🇪 Дизайн Heizenker</strong><br><span class="muted">Премиальный внешний вид</span></div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section id="catalog">
+    <h2>Каталог</h2>
+    <div class="grid g3">
+      <div class="card">
+        <div class="muted">Модель</div>
+        <h3>Heizenker HZ-C1</h3>
+        <div class="muted">Эспрессо, капучино • Бак 1.8 л • Давление 19 бар</div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
+          <a class="btn ghost" href="https://www.ozon.ru/" target="_blank" rel="noopener">Купить на Ozon</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="muted">Модель</div>
+        <h3>Heizenker HZ-C2</h3>
+        <div class="muted">Двойной бойлер • Молочная система • Тихий помол</div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
+          <a class="btn ghost" href="https://www.ozon.ru/" target="_blank" rel="noopener">Купить на Ozon</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="muted">Модель</div>
+        <h3>Heizenker HZ-C3</h3>
+        <div class="muted">Профиль температуры • Память рецептов</div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
+          <a class="btn ghost" href="https://www.ozon.ru/" target="_blank" rel="noopener">Купить на Ozon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>О бренде</h2>
+    <p class="muted" style="max-width:840px">Heizenker — техника для дома с акцентом на комфорт и надёжность. Мы объединяем инженерный подход и премиальный дизайн, чтобы каждое утро начиналось с идеального кофе.</p>
+  </section>
+
+  <!-- WARRANTY -->
+  <section id="warranty">
+    <h2>Гарантия и сервис</h2>
+    <div class="card">
+      <ul>
+        <li>Гарантия 24 месяца на кофемашины Heizenker</li>
+        <li>Сервисные партнёры в крупных городах</li>
+        <li>Поддержка: <a href="mailto:support@heizenker.com">support@heizenker.com</a></li>
+      </ul>
+      <p class="muted">Полные условия гарантии и возврата будут доступны после запуска интернет-магазина.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <div class="card">
+      <p class="muted">По вопросам сотрудничества и оптовых поставок: <a href="mailto:hello@heizenker.com">hello@heizenker.com</a></p>
+      <p class="muted">Мы в соцсетях: скоро</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="padding:20px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+    <small>© <span id="y"></span> Heizenker</small>
+    <small class="muted"><a href="#warranty" style="color:#cfe3f2">Гарантия</a> • <a href="#" style="color:#cfe3f2">Политика конфиденциальности</a></small>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body></html>
