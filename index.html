@@ -1,31 +1,53 @@
-<!doctype html><html lang="ru"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Heizenker — кофемашины для дома</title>
-<meta name="description" content="Heizenker — кофе как в лучшей кофейне, у вас дома. Премиальные кофемашины, гарантия 2 года.">
-<link rel="icon" href="favicon.ico">
-<style>
-  :root{--bg:#0b1116;--card:#101820;--txt:#e8eef4;--muted:#9fb0be;--accent:#2bd17e}
-  *{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;background:
-  radial-gradient(1200px 700px at 80% -10%, #213243 0%, #0b1116 50%);color:var(--txt)}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-  header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background:rgba(16,24,32,.5);border-bottom:1px solid rgba(255,255,255,.08);z-index:10}
-  .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-  .logo{display:flex;align-items:center;gap:10px}
-  .emblem{width:34px;height:34px;border-radius:8px;background:linear-gradient(145deg,#2bd17e,#19995b);display:grid;place-items:center;font-weight:900;color:#0b1116}
-  nav a{color:#cfe3f2;text-decoration:none;margin:0 10px;opacity:.9}nav a:hover{opacity:1}
-  .hero{padding:64px 0}
-  h1{font-size:44px;line-height:1.07;margin:0 0 12px;letter-spacing:-.02em}
-  p.lead{color:#cfe3f2;opacity:.9;max-width:720px;margin:0 0 18px}
-  .btn{display:inline-block;background:var(--accent);color:#081016;padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none}
-  .btn.ghost{background:transparent;color:#e8eef4;border:1px solid rgba(255,255,255,.18)}
-  .grid{display:grid;gap:16px}
-  .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-  .card{border:1px solid rgba(255,255,255,.10);border-radius:16px;background:rgba(255,255,255,.03);padding:18px}
-  .card h3{margin:6px 0 4px}
-  section{padding:36px 0}
-  footer{border-top:1px solid rgba(255,255,255,.08);margin-top:36px}
-  small, .muted{color:var(--muted)}
-</style>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Heizenker — кофемашины для дома</title>
+  <meta name="description" content="Кофе как в лучшей кофейне — у вас дома. Премиальные кофемашины Heizenker, тихий помол, автоочистка, гарантия 2 года.">
+
+  <!-- SEO / Canonical -->
+  <link rel="canonical" href="https://heizenker.com">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Heizenker — кофемашины для дома">
+  <meta property="og:description" content="Кофе как в лучшей кофейне — у вас дома. Премиальные кофемашины Heizenker.">
+  <meta property="og:url" content="https://heizenker.com">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root{--bg:#0b1116;--card:#101820;--txt:#e8eef4;--muted:#9fb0be;--accent:#2bd17e}
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;background:
+      radial-gradient(1200px 700px at 80% -10%, #213243 0%, #0b1116 50%);color:var(--txt);scroll-behavior:smooth}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background:rgba(16,24,32,.55);
+      border-bottom:1px solid rgba(255,255,255,.08);z-index:10}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px}
+    .emblem{width:34px;height:34px;border-radius:8px;background:linear-gradient(145deg,#2bd17e,#19995b);
+      display:grid;place-items:center;font-weight:900;color:#0b1116}
+    nav a{color:#cfe3f2;text-decoration:none;margin:0 10px;opacity:.9} nav a:hover{opacity:1}
+    .hero{padding:64px 0}
+    h1{font-size:44px;line-height:1.07;margin:0 0 12px;letter-spacing:-.02em}
+    h2{margin:0 0 14px}
+    p.lead{color:#cfe3f2;opacity:.9;max-width:720px;margin:0 0 18px}
+    .btn{display:inline-block;background:var(--accent);color:#081016;padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none}
+    .btn.ghost{background:transparent;color:#e8eef4;border:1px solid rgba(255,255,255,.18)}
+    .grid{display:grid;gap:16px}
+    .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .card{border:1px solid rgba(255,255,255,.10);border-radius:16px;background:rgba(255,255,255,.03);padding:18px}
+    .card h3{margin:6px 0 4px}
+    section{padding:36px 0}
+    footer{border-top:1px solid rgba(255,255,255,.08);margin-top:36px}
+    small,.muted{color:var(--muted)}
+
+    /* фикс-кнопка "Купить" на мобиле */
+    .sticky-buy{position:fixed;left:12px;right:12px;bottom:14px;display:none;z-index:20}
+    .sticky-buy a{display:block;text-align:center}
+    @media (max-width:768px){ .sticky-buy{display:block} }
+  </style>
 </head>
 <body>
 
@@ -42,15 +64,18 @@
   </div>
 </header>
 
+<!-- фикс-кнопка для мобилы (ПОДСТАВЬ свой WB-URL) -->
+<div class="sticky-buy"><a class="btn" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a></div>
+
 <main class="wrap">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="home">
     <h1>Кофе как в лучшей кофейне —<br>у вас дома</h1>
     <p class="lead">Премиальные кофемашины Heizenker. Автоматическое приготовление эспрессо и капучино, тихая работа, современный дизайн и гарантия 2 года.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
       <a class="btn" href="#catalog">Смотреть каталог</a>
-      <!-- ВСТАВЬ ССЫЛКУ НА СВОЮ КАРТОЧКУ WB -->
+      <!-- ПОДСТАВЬ свой WB-URL -->
       <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a>
     </div>
   </section>
@@ -77,6 +102,7 @@
         <h3>Heizenker HZ-C1</h3>
         <div class="muted">Эспрессо, капучино • Бак 1.8 л • Давление 19 бар</div>
         <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <!-- ПОДСТАВЬ свои URL -->
           <a class="btn" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
           <a class="btn ghost" href="https://www.ozon.ru/" target="_blank" rel="noopener">Купить на Ozon</a>
         </div>
@@ -135,8 +161,32 @@
 <footer>
   <div class="wrap" style="padding:20px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
     <small>© <span id="y"></span> Heizenker</small>
-    <small class="muted"><a href="#warranty" style="color:#cfe3f2">Гарантия</a> • <a href="#" style="color:#cfe3f2">Политика конфиденциальности</a></small>
+    <small class="muted"><a href="#warranty" style="color:#cfe3f2">Гарантия</a> • <a href="/legal/privacy.html" style="color:#cfe3f2">Политика конфиденциальности</a></small>
   </div>
 </footer>
+
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-</body></html>
+
+<!-- Яндекс.Метрика: замени YOUR_COUNTER_ID -->
+<!--
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+  k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})(window, document, "script",
+  "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(YOUR_COUNTER_ID, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/YOUR_COUNTER_ID" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+-->
+
+<!-- GA4 (по желанию): замени G-XXXX -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); gtag('config', 'G-XXXX');
+</script>
+-->
+</body>
+</html>
