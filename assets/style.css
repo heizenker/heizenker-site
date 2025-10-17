@@ -254,3 +254,7 @@ body.menu-open .mobile-panel{ transform:translateX(0) }
     padding: 20px;
   }
 }
+/* На мобильных убираем hover-выпадение у кнопки "Смотреть каталог" — будем вести на catalog.html */
+@media (max-width: 992px){
+  .catalog-wrap .catalog-menu{ display:none !important; }
+}
