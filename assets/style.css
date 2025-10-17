@@ -185,3 +185,72 @@ h2{margin: 28px 0 14px}
   .g3{ grid-template-columns: 1fr; }
   .hero-slider .overlay .wrap{ position: static; margin: 20px auto 0; display:block; }
 }
+/* ====== MOBILE HEADER / BURGER ====== */
+.burger{
+  display:none;
+  width:40px; height:40px; border:1px solid rgba(255,255,255,.15);
+  border-radius:10px; background:rgba(16,24,32,.6);
+  backdrop-filter: blur(6px);
+  cursor:pointer; padding:8px; gap:4px;
+}
+.burger span{
+  display:block; height:2px; background:#fff; border-radius:2px;
+}
+@media (max-width: 992px){
+  .topnav{ display:none; }
+  .burger{ display:inline-grid; align-content:center }
+}
+
+/* затемняющий фон */
+.mobile-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.5); z-index: 999;
+  opacity:0; visibility:hidden; transition:opacity .25s ease, visibility .25s ease;
+}
+
+/* выездная панель */
+.mobile-panel{
+  position:fixed; top:0; right:0; height:100vh; width:84vw; max-width:360px;
+  background:#0f151b; border-left:1px solid rgba(255,255,255,.08);
+  z-index:1000; transform:translateX(100%);
+  transition: transform .28s ease;
+  display:flex; flex-direction:column; padding:18px;
+}
+.mobile-panel .mp-head{
+  display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;
+  font-weight:700;
+}
+.mobile-panel .mp-close{
+  background:transparent; border:0; color:#fff; font-size:22px; cursor:pointer;
+}
+.mobile-panel a{
+  color:#fff; text-decoration:none; padding:14px 8px; border-radius:10px;
+  border:1px solid rgba(255,255,255,.06); margin:6px 0; background:rgba(255,255,255,.02);
+}
+.mobile-panel a:hover{ background:rgba(255,255,255,.06) }
+.mobile-panel .mp-actions{ margin-top:auto; display:grid; gap:10px }
+
+/* состояние "меню открыто" */
+body.menu-open{ overflow:hidden }
+body.menu-open .mobile-overlay{ opacity:1; visibility:visible }
+body.menu-open .mobile-panel{ transform:translateX(0) }
+
+/* Чтобы шапка не перекрывалась слайдером на мобиле */
+@media (max-width: 768px){
+  #site-header{ position:sticky; top:0; z-index:1001 }
+}
+
+/* Чуть ниже слайдер на мобиле, чтобы заголовки читались */
+@media (max-width: 768px){
+  .slider-container{ height: 52vh; min-height: 320px; }
+}
+
+/* Плашка на слайдере — немного меньше на мобайле */
+@media (max-width: 768px){
+  .hero-slider .overlay .wrap{
+    right: 4%;
+    left: 4%;
+    bottom: 10%;
+    max-width: none;
+    padding: 20px;
+  }
+}
