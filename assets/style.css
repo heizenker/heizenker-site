@@ -203,3 +203,30 @@ h2{margin: 28px 0 14px}
   color: #fff;
   margin: 0 0 16px;
 }
+/* Растягиваем overlay на весь слайдер */
+.hero-slider .overlay{
+  position: absolute;
+  inset: 0;              /* было: inset: 0 0 auto 0; */
+  z-index: 5;
+  pointer-events: none;  /* кликаются только кнопки внутри */
+  padding-top: 0;        /* overlay без внутренних отступов */
+}
+
+/* Плашка с заголовком и кнопками — вниз и вправо */
+.hero-slider .overlay .wrap{
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
+  left: auto;
+  top: auto;
+
+  background: rgba(0,0,0,.8);
+  color: #fff;
+  padding: 28px 32px;
+  border-radius: 12px;
+  max-width: 600px;
+  pointer-events: auto;
+}
+
+.hero-slider .overlay h1,
+.hero-slider .overlay .lead { color:#fff; margin:0 0 16px; }
