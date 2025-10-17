@@ -128,20 +128,48 @@ h2{margin: 28px 0 14px}
   transition:opacity .2s ease, transform .2s ease;
   z-index:10;
 }
-.catalog-menu a{
-  display:block; padding:10px 12px; border-radius:8px; color:#fff; text-decoration:none;
-}
-.catalog-menu a:hover{ background:rgba(255,255,255,.06) }
-.catalog-wrap:hover .catalog-menu,
-.catalog-wrap:focus-within .catalog-menu{
-  opacity:1; transform:translateY(0); pointer-events:auto;
+.catalog-wrap {
+  position: relative;
+  display: inline-block;
 }
 
-/* ===== Хиты продаж ===== */
-.hits .prod{
-  display:block; border:1px solid rgba(255,255,255,.12); border-radius:14px; overflow:hidden;
-  background:rgba(16,24,32,.55); text-decoration:none; color:#fff;
-  transform:translateZ(0);
+.catalog-menu {
+  position: absolute;
+  top: 100%;         /* прямо под кнопкой, без зазора */
+  left: 0;
+  min-width: 240px;
+  background: rgba(16,24,32,.96);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 8px;
+  margin-top: 0;     /* убрали отступ, чтобы не было пустоты */
+  box-shadow: 0 12px 34px rgba(0,0,0,.35);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 10;
+}
+
+.catalog-menu a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.catalog-menu a:hover {
+  background: rgba(255,255,255,.06);
+}
+
+.catalog-wrap:hover .catalog-menu,
+.catalog-wrap:focus-within .catalog-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 }
 .hits .prod img{
   width:100%; height:240px; object-fit:cover; display:block; transition: transform .25s ease;
