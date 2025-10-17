@@ -55,7 +55,52 @@
   <button class="next">❯</button>
 </section>
     
-    <!-- Преимущества -->
+    
+<section class="slider hero-slider" aria-label="Галерея техники">
+  <div class="slides" id="slides">
+    <div class="slide hero" style="--bg:url('/assets/slider/1.jpg')">
+      <div class="slide-content">
+        <h2>Кофе как в кофейне — дома</h2>
+        <p class="muted">Автоэспрессо и капучино · Тихая работа · Премиальный дизайн</p>
+        <div class="actions">
+          <a class="btn" href="/pages/c/coffee.html">Смотреть кофемашины</a>
+          <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide hero" style="--bg:url('/assets/slider/2.jpg')">
+      <div class="slide-content">
+        <h2>Чистота без лишних усилий</h2>
+        <p class="muted">Моющий модуль · Самоочистка · Минимум ухода</p>
+        <div class="actions">
+          <a class="btn" href="/pages/c/vacuums.html">К пылесосам</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide hero" style="--bg:url('/assets/slider/3.jpg')">
+      <div class="slide-content">
+        <h2>Тёплый дом круглый год</h2>
+        <p class="muted">Термостат · Тихий режим · Безопасность</p>
+        <div class="actions">
+          <a class="btn" href="/pages/c/heaters.html">К обогревателям</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide hero" style="--bg:url('/assets/slider/4.jpg')">
+      <div class="slide-content">
+        <h2>Быстро и полезно каждый день</h2>
+        <p class="muted">Циркуляция воздуха · Хрустящая корочка · Здоровое питание</p>
+        <div class="actions">
+          <a class="btn" href="/pages/c/airgrills.html">К аэрогрилям</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="arrow prev" aria-label="Предыдущий" id="prev">‹</button>
+  <button class="arrow next" aria-label="Следующий" id="next">›</button>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+</section>
+<!-- Преимущества -->
     <section>
       <h2>Преимущества</h2>
       <div class="grid g3">
@@ -140,5 +185,40 @@
     });
   })();
   </script>
+
+<script>
+(function(){
+  const wrap = document.getElementById('slides');
+  if(!wrap) return;
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const dotsWrap = document.getElementById('dots');
+  const total = wrap.children.length;
+  let i = 0, timer;
+
+  for (let k=0;k<total;k++){
+    const b = document.createElement('button');
+    b.setAttribute('aria-label','Слайд ' + (k+1));
+    dotsWrap.appendChild(b);
+  }
+  const dots = Array.from(dotsWrap.children);
+
+  function go(n){
+    i = (n + total) % total;
+    wrap.style.transform = `translateX(-${i*100}%)`;
+    dots.forEach((d,idx)=>d.classList.toggle('active', idx===i));
+    reset();
+  }
+  function reset(){
+    clearInterval(timer);
+    timer = setInterval(()=>go(i+1), 5000);
+  }
+  prev?.addEventListener('click', ()=>go(i-1));
+  next?.addEventListener('click', ()=>go(i+1));
+  dots.forEach((d,idx)=>d.addEventListener('click', ()=>go(idx)));
+  go(0);
+})();
+</script>
+
 </body>
 </html>
