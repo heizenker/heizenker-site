@@ -98,3 +98,18 @@ nav{display:flex;gap:10px;flex-wrap:wrap}
   .hero-catalog:hover .catalog-dropdown{display:none} /* отключаем hover на мобиле */
   .hero-catalog.open .catalog-dropdown{display:block}
 }
+.btn {
+  display: inline-block;
+  background: #e63946; /* Красный цвет */
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #d62828; /* Более тёмный красный при наведении */
+  transform: translateY(-2px); /* лёгкий подскок */
+}
