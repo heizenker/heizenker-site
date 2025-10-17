@@ -3,23 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Heizenker — надежность в каждой детали</title>
-  <meta name="description" content="Премиальные кофемашины Heizenker. Премиальная бытовая техника для дома. Гарантия 2 года.">
+  <title>Heizenker — Премиальная бытовая техника для дома</title>
+  <meta name="description" content="Современные решения для уюта и комфорта. Кофемашины, пылесосы, обогреватели и аэрогрили Heizenker.">
   <link rel="canonical" href="https://heizenker.com">
-  <meta property="og:title" content="Heizenker — кофемашины для дома">
-  <meta property="og:description" content="Кофе как в лучшей кофейне — у вас дома. Премиальные кофемашины Heizenker.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://heizenker.com">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-  <!-- шапка подключается из partials/header.html -->
+  <!-- шапка из partials -->
   <header id="site-header"></header>
   <script src="/assets/include.js"></script>
 
-  <!-- фикс-кнопка купить на WB для мобилы -->
+  <!-- фикс-кнопка WB на мобилке -->
   <div class="sticky-buy">
     <a class="btn" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a>
   </div>
@@ -27,25 +23,24 @@
   <main class="wrap">
     <!-- HERO -->
     <section class="hero">
-      <h1>Премиальная бытовая техника<br>для вашего дома</h1>
-      <p class="lead">Современные решения для уюта и комфорта. Гарантия 2 года.</p>
+      <h1>Премиальная бытовая техника для дома</h1>
+      <p class="lead">Современные решения для уюта и комфорта</p>
 
-      <!-- КНОПКИ: «Смотреть каталог» + выпадающие категории, и WB -->
+      <!-- КНОПКИ -->
       <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-  <span class="hero-catalog" id="hero-catalog">
-    <a class="btn" href="/pages/catalog.html" id="hero-catalog-btn">Смотреть каталог</a>
-    <button class="catalog-toggle" aria-label="Открыть категории">▼</button>
-    <div class="catalog-dropdown" role="menu" aria-label="Категории">
-      <a href="/pages/c/coffee.html">Кофемашины</a>
-      <a href="/pages/c/vacuums.html">Моющие пылесосы</a>
-      <a href="/pages/c/heaters.html">Обогреватели</a>
-      <a href="/pages/c/airgrills.html">Аэрогрили</a>
-    </div>
-  </span>
+        <span class="hero-catalog" id="hero-catalog">
+          <a class="btn" href="/pages/catalog.html" id="hero-catalog-btn">Смотреть каталог</a>
+          <button class="catalog-toggle" aria-label="Открыть категории">▼</button>
+          <div class="catalog-dropdown" role="menu" aria-label="Категории">
+            <a href="/pages/c/coffee.html">Кофемашины</a>
+            <a href="/pages/c/vacuums.html">Моющие пылесосы</a>
+            <a href="/pages/c/heaters.html">Обогреватели</a>
+            <a href="/pages/c/airgrills.html">Аэрогрили</a>
+          </div>
+        </span>
 
-  <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a>
-</div>
+        <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a>
+      </div>
     </section>
 
     <!-- Преимущества -->
@@ -60,77 +55,39 @@
         <div class="card"><strong>🇩🇪 Дизайн Heizenker</strong><br><span class="muted">Премиальный внешний вид</span></div>
       </div>
     </section>
-
-    <!-- Хиты/превью каталога -->
-    <section>
-      <h2>Хиты продаж</h2>
-      <div class="grid g3">
-        <div class="card">
-          <div class="muted">Модель</div><h3>Heizenker HZ-C1</h3>
-          <div class="muted">Эспрессо/капучино • Бак 1.8 л • 19 бар</div>
-          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="/products/hz-c1.html">Подробнее</a>
-            <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="muted">Модель</div><h3>Heizenker HZ-C2</h3>
-          <div class="muted">Двойной бойлер • Молочная система</div>
-          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="/products/hz-c2.html">Подробнее</a>
-            <a class="btn ghost" href="https://www.ozon.ru/" target="_blank" rel="noopener">Купить на Ozon</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="muted">Модель</div><h3>Heizenker HZ-C3</h3>
-          <div class="muted">Профиль температуры • Память рецептов</div>
-          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="/products/hz-c3.html">Подробнее</a>
-            <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- О бренде коротко -->
-    <section>
-      <h2>О бренде</h2>
-      <p class="muted" style="max-width:840px">Heizenker — техника для дома с акцентом на комфорт и надёжность. Инженерный подход и премиальный дизайн — чтобы каждое утро начиналось с идеального кофе.</p>
-    </section>
   </main>
 
   <footer id="site-footer"></footer>
 
-  <!-- Скрипт для выпадающих категорий на кнопке «Смотреть каталог» -->
+  <!-- Скрипт для мобилы (раскрытие по нажатию) -->
   <script>
-    (function(){
-      const wrap = document.getElementById('hero-catalog');
-      if(!wrap) return;
-      const btn  = document.getElementById('hero-catalog-btn');
-      const tog  = wrap.querySelector('.catalog-toggle');
+  (function(){
+    const wrap = document.getElementById('hero-catalog');
+    if(!wrap) return;
+    const btn  = document.getElementById('hero-catalog-btn');
+    const tog  = wrap.querySelector('.catalog-toggle');
 
-      // На мобиле: кнопка-стрелка раскрывает
-      tog?.addEventListener('click', function(e){
-        e.preventDefault();
-        wrap.classList.toggle('open');
-        tog.setAttribute('aria-expanded', wrap.classList.contains('open') ? 'true' : 'false');
-      });
+    // стрелка ▼ раскрывает меню на мобиле
+    tog?.addEventListener('click', function(e){
+      e.preventDefault();
+      wrap.classList.toggle('open');
+      tog.setAttribute('aria-expanded', wrap.classList.contains('open') ? 'true' : 'false');
+    });
 
-      // На мобиле первый тап по большой зелёной кнопке — раскрывает, второй — переходит
-      btn?.addEventListener('click', function(e){
-        if (window.matchMedia('(max-width: 768px)').matches && !wrap.classList.contains('open')) {
-          e.preventDefault();
-          wrap.classList.add('open');
-        }
-      });
+    // первый тап по зелёной кнопке на мобиле — раскрывает, второй — переходит
+    btn?.addEventListener('click', function(e){
+      if (window.matchMedia('(max-width:768px)').matches && !wrap.classList.contains('open')) {
+        e.preventDefault(); wrap.classList.add('open');
+      }
+    });
 
-      // Закрывать по клику вне (мобила)
-      document.addEventListener('click', (ev)=>{
-        if (!wrap.contains(ev.target) && window.matchMedia('(max-width: 768px)').matches){
-          wrap.classList.remove('open');
-        }
-      });
-    })();
+    // клик вне — закрыть (мобила)
+    document.addEventListener('click', (ev)=>{
+      if (!wrap.contains(ev.target) && window.matchMedia('(max-width:768px)').matches){
+        wrap.classList.remove('open');
+      }
+    });
+  })();
   </script>
 </body>
 </html>
