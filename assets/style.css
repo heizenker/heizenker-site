@@ -230,3 +230,24 @@ h2{margin: 28px 0 14px}
 
 .hero-slider .overlay h1,
 .hero-slider .overlay .lead { color:#fff; margin:0 0 16px; }
+/* Выпадающее меню */
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s;
+  position: absolute;
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 12px 0;
+  min-width: 200px;
+  z-index: 100;
+}
+
+/* При наведении — плавное появление */
+.hero-catalog:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
