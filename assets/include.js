@@ -23,3 +23,22 @@ document.querySelector('.prev').addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + slideCount) % slideCount;
   slides.style.transform = translateX(-${currentIndex * 100}%);
 });
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.querySelectorAll(".slide");
+  slides.forEach(slide => slide.style.display = "none");
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // автопереключение каждые 4с
+}
+
+document.querySelector(".prev").onclick = () => {
+  slideIndex -= 2; 
+  showSlides();
+};
+document.querySelector(".next").onclick = () => {
+  showSlides();
+}
