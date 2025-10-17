@@ -184,3 +184,22 @@ h2{margin: 28px 0 14px}
 .hero-slider .overlay .actions .btn {
   margin-right: 12px;
 }
+.hero-slider .overlay .wrap {
+  background: rgba(0, 0, 0, 0.8); /* тёмная плашка */
+  padding: 28px 32px;
+  border-radius: 12px;
+  max-width: 600px;
+  color: #fff;
+
+  position: absolute;
+  bottom: 12%;   /* смещение вниз */
+  right: 8%;     /* смещение вправо */
+  left: auto;
+  top: auto;
+}
+
+.hero-slider .overlay h1,
+.hero-slider .overlay .lead {
+  color: #fff;
+  margin: 0 0 16px;
+}
