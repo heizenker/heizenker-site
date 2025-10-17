@@ -49,8 +49,8 @@ body{
 /* СЛАЙДЕР */
 .slider-container{
   position:relative;
-  width:100vw;                  /* на всю ширину окна */
-  height:70vh; min-height:360px; max-height:720px;
+  width:100vw;
+  height:72vh; min-height:380px; max-height:760px;
   overflow:hidden;
 }
 .slide{ display:none; width:100%; height:100%; }
@@ -83,10 +83,97 @@ h2{margin: 28px 0 14px}
 .footer a{ color:var(--muted); text-decoration:none }
 .footer a:hover{ color:#fff }
 
+/* ===== ГЕРОЙ поверх слайдера ===== */
+.hero-slider{ position:relative; }
+.hero-slider .overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  padding-top: 0;
+}
+.hero-slider .overlay .wrap{
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
+  background: rgba(0,0,0,.8);
+  color: #fff;
+  padding: 28px 32px;
+  border-radius: 12px;
+  max-width: 600px;
+  pointer-events: auto;
+}
+.hero-slider .overlay h1,
+.hero-slider .overlay .lead {
+  color:#fff;
+  margin:0 0 16px;
+}
+.hero-slider .overlay .actions .btn{ margin-right:12px; }
+
+/* ===== ВЫПАДАЮЩЕЕ МЕНЮ "Смотреть каталог" ===== */
+.catalog-wrap {
+  position: relative;
+  display: inline-block;
+}
+.catalog-btn { position: relative; z-index: 6; }
+.catalog-menu {
+  position: absolute;
+  top: 100%; left: 0;
+  min-width: 240px;
+  background: rgba(16,24,32,.96);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 8px 0;
+  margin-top: 0;
+  box-shadow: 0 12px 34px rgba(0,0,0,.35);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.97);
+  transition: opacity 0.8s ease-in-out,
+              transform 0.8s ease-in-out,
+              visibility 0.8s ease-in-out;
+  z-index: 10;
+}
+.catalog-menu a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.catalog-menu a:hover { background: rgba(255,255,255,.08); }
+.catalog-wrap:hover .catalog-menu,
+.catalog-wrap:focus-within .catalog-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* ===== Хиты продаж ===== */
+.hits .prod{
+  display:block;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  overflow:hidden;
+  background:rgba(16,24,32,.55);
+  text-decoration:none;
+  color:#fff;
+  transform:translateZ(0);
+}
+.hits .prod img{
+  width:100%; height:240px; object-fit:cover; display:block;
+  transition: transform .25s ease;
+}
+.hits .prod:hover img{ transform: scale(1.04) }
+.hits .p-title{ padding:12px 14px; font-weight:700 }
+
+/* адаптив */
 @media (max-width:992px){
   .hero h1{ font-size:32px }
   .g3{ grid-template-columns: repeat(2, minmax(0,1fr)); }
   .slider-container{ height:56vh; min-height:280px; }
+  .hero-slider .overlay .wrap{ bottom: 8%; right: 5%; max-width: 90%; }
 }
 @media (max-width:768px){
   .head{ height:56px }
@@ -96,186 +183,5 @@ h2{margin: 28px 0 14px}
   .hero h1{ font-size:26px }
   .slider-container{ height:40vh; min-height:220px; }
   .g3{ grid-template-columns: 1fr; }
-}
-/* ===== ГЕРОЙ поверх слайдера ===== */
-.hero-slider{ position:relative; }
-.hero-slider .overlay{
-  position:absolute; inset:0 0 auto 0;   /* сверху поверх кадра */
-  z-index:5; pointer-events:none;         /* кликаются только кнопки внутри */
-  padding-top:80px;                       /* отступ от шапки */
-}
-@media (max-width:768px){ .hero-slider .overlay{ padding-top:64px } }
-
-.hero-slider .overlay .wrap{ pointer-events:auto; }
-.hero-slider .overlay h1{ margin:0 0 6px; font-size:40px; line-height:1.12 }
-.hero-slider .overlay .lead{ margin:0 0 14px }
-@media (max-width:992px){ .hero-slider .overlay h1{ font-size:32px } }
-@media (max-width:768px){ .hero-slider .overlay h1{ font-size:26px } }
-
-/* Слайдер растянут на весь экран (остаётся из прошлых стилей)
-   Если нужно больше "высоты фона" — подними height: */
-.slider-container{ height:72vh; min-height:380px; max-height:760px; }
-
-/* ===== Выпадающее меню у "Смотреть каталог" ===== */
-.catalog-wrap{ position:relative; display:inline-block }
-.catalog-btn{ position:relative; z-index:6 }  /* поверх картинки */
-.catalog-menu{
-  position:absolute; top:100%; left:0; min-width:240px;
-  background:rgba(16,24,32,.96); border:1px solid rgba(255,255,255,.12);
-  border-radius:12px; padding:8px; margin-top:8px;
-  box-shadow:0 12px 34px rgba(0,0,0,.35);
-  opacity:0; transform:translateY(-6px); pointer-events:none;
-  transition:opacity .2s ease, transform .2s ease;
-  z-index:10;
-}
-.catalog-wrap {
-  position: relative;
-  display: inline-block;
-}
-
-.catalog-menu {
-  position: absolute;
-  top: 100%;         /* прямо под кнопкой, без зазора */
-  left: 0;
-  min-width: 240px;
-  background: rgba(16,24,32,.96);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 12px;
-  padding: 8px;
-  margin-top: 0;     /* убрали отступ, чтобы не было пустоты */
-  box-shadow: 0 12px 34px rgba(0,0,0,.35);
-
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  z-index: 10;
-}
-
-.catalog-menu a {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 8px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.catalog-menu a:hover {
-  background: rgba(255,255,255,.06);
-}
-
-.catalog-wrap:hover .catalog-menu,
-.catalog-wrap:focus-within .catalog-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-}
-.hits .prod img{
-  width:100%; height:240px; object-fit:cover; display:block; transition: transform .25s ease;
-}
-.hits .prod:hover img{ transform: scale(1.04) }
-.hits .p-title{ padding:12px 14px; font-weight:700 }
-/* Полупрозрачный фон для блока текста в hero */
-.hero-slider .overlay .wrap {
-  background: rgba(0, 0, 0, 0.55); /* тёмный фон с прозрачностью */
-  padding: 24px 28px;
-  border-radius: 12px;
-  display: inline-block;   /* чтобы фон был только под текстом */
-  max-width: 720px;        /* ширина ограничена, чтобы красиво смотрелось */
-}
-.hero-slider .overlay h1,
-.hero-slider .overlay .lead,
-.hero-slider .overlay .actions {
-  margin: 0 0 14px;
-}
-/* Плашка для заголовка и кнопок */
-.hero-slider .overlay .wrap {
-  background: rgba(0, 0, 0, 0.8); /* более тёмная плашка */
-  padding: 28px 32px;
-  border-radius: 12px;
-  max-width: 600px;
-  color: #fff;
-
-  position: absolute;
-  bottom: 10%;   /* сдвиг вниз */
-  right: 8%;     /* сдвиг правее */
-  transform: translateY(0);
-}
-
-.hero-slider .overlay h1,
-.hero-slider .overlay .lead {
-  color: #fff;   /* белый текст поверх тёмного фона */
-  margin: 0 0 16px;
-}
-
-.hero-slider .overlay .actions .btn {
-  margin-right: 12px;
-}
-.hero-slider .overlay .wrap {
-  background: rgba(0, 0, 0, 0.8); /* тёмная плашка */
-  padding: 28px 32px;
-  border-radius: 12px;
-  max-width: 600px;
-  color: #fff;
-
-  position: absolute;
-  bottom: 12%;   /* смещение вниз */
-  right: 8%;     /* смещение вправо */
-  left: auto;
-  top: auto;
-}
-
-.hero-slider .overlay h1,
-.hero-slider .overlay .lead {
-  color: #fff;
-  margin: 0 0 16px;
-}
-/* Растягиваем overlay на весь слайдер */
-.hero-slider .overlay{
-  position: absolute;
-  inset: 0;              /* было: inset: 0 0 auto 0; */
-  z-index: 5;
-  pointer-events: none;  /* кликаются только кнопки внутри */
-  padding-top: 0;        /* overlay без внутренних отступов */
-}
-
-/* Плашка с заголовком и кнопками — вниз и вправо */
-.hero-slider .overlay .wrap{
-  position: absolute;
-  bottom: 12%;
-  right: 8%;
-  left: auto;
-  top: auto;
-
-  background: rgba(0,0,0,.8);
-  color: #fff;
-  padding: 28px 32px;
-  border-radius: 12px;
-  max-width: 600px;
-  pointer-events: auto;
-}
-
-.hero-slider .overlay h1,
-.hero-slider .overlay .lead { color:#fff; margin:0 0 16px; }
-/* Выпадающее меню */
-.dropdown-content {
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s;
-  position: absolute;
-  background: #1a1a1a;
-  border-radius: 8px;
-  padding: 12px 0;
-  min-width: 200px;
-  z-index: 100;
-}
-
-/* При наведении — плавное появление */
-.hero-catalog:hover .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  .hero-slider .overlay .wrap{ position: static; margin: 20px auto 0; display:block; }
 }
