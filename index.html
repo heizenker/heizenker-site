@@ -1,246 +1,82 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Heizenker — Премиальная бытовая техника для дома</title>
-  <meta name="description" content="Современные решения для уюта и комфорта. Кофемашины, пылесосы, обогреватели и аэрогрили Heizenker.">
-  <link rel="canonical" href="https://heizenker.com">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heizenker — премиальная бытовая техника</title>
+  <meta name="description" content="Современные решения для уюта и комфорта. Кофемашины, моющие пылесосы, обогреватели и аэрогрили." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
-<header id="site-header">
-  <div class="wrap row" style="display:flex;align-items:center;justify-content:space-between;">
-    <a href="/" class="logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
-      <img src="/logo.png" alt="Heizenker" style="height:40px;">
-      <span style="font-weight:700;font-size:22px;">HEIZENKER</span>
-    </a>
-    <nav style="display:flex;gap:20px;">
-      <a href="/pages/sale.html">Товары со скидкой</a>
-      <a href="/pages/about.html">О бренде</a>
-      <a href="/pages/warranty.html">Гарантия</a>
-      <a href="/pages/contacts.html">Контакты</a>
-      <a href="/legal/privacy.html">Политика</a>
-    </nav>
-  </div>
-</header>
-  <!-- шапка из partials -->
-  <header id="site-header"></header>
-  <script src="/assets/include.js"></script>
 
-  <!-- фикс-кнопка WB на мобилке -->
-  <div class="sticky-buy">
-    <a class="btn" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a>
-  </div>
+  <!-- ШАПКА -->
+  <header id="site-header">
+    <div class="wrap row head">
+      <a href="/" class="logo">
+        <img src="/logo.png" alt="Heizenker" />
+        <span>HEIZENKER</span>
+      </a>
+      <nav class="topnav">
+        <a href="/pages/sale.html">Товары со скидкой</a>
+        <a href="/pages/about.html">О бренде</a>
+        <a href="/pages/warranty.html">Гарантия</a>
+        <a href="/pages/contacts.html">Контакты</a>
+        <a href="/legal/privacy.html">Политика</a>
+      </nav>
+    </div>
+  </header>
 
-  <main class="wrap">
-    <!-- HERO -->
-    <section class="hero">
+  <main>
+
+    <!-- ГЕРОЙ -->
+    <section class="wrap hero">
       <h1>Премиальная бытовая техника для дома</h1>
       <p class="lead">Современные решения для уюта и комфорта</p>
-
-      <!-- КНОПКИ -->
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <span class="hero-catalog" id="hero-catalog">
-          <a class="btn" href="/pages/catalog.html" id="hero-catalog-btn">Смотреть каталог</a>
-          <button class="catalog-toggle" aria-label="Открыть категории">▼</button>
-          <div class="catalog-dropdown" role="menu" aria-label="Категории">
-            <a href="/pages/c/coffee.html">Кофемашины</a>
-            <a href="/pages/c/vacuums.html">Моющие пылесосы</a>
-            <a href="/pages/c/heaters.html">Обогреватели</a>
-            <a href="/pages/c/airgrills.html">Аэрогрили</a>
-          </div>
-        </span>
-
+      <div class="actions">
+        <a class="btn" href="/pages/c/coffee.html">Смотреть каталог</a>
         <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a>
       </div>
     </section>
 
-    <!-- Слайдер -->
-<section class="slider">
-  <div class="slider-container">
-    <div class="slide active">
-      <img src="/assets/slider1.png" alt="Heizenker техника 1">
-    </div>
-    <div class="slide">
-      <img src="/assets/slider2.png" alt="Heizenker техника 2">
-    </div>
-    <div class="slide">
-      <img src="/assets/slider3.png" alt="Heizenker техника 3">
-    </div>
-    <div class="slide">
-      <img src="/assets/slider4.png" alt="Heizenker техника 4">
-    </div>
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
-  </div>
-</section>
-    
-    
-<section class="slider hero-slider" aria-label="Галерея техники">
-  <div class="slides" id="slides">
-    <div class="slide hero" style="--bg:url('/assets/slider/1.jpg')">
-      <div class="slide-content">
-        <h2>Кофе как в кофейне — дома</h2>
-        <p class="muted">Автоэспрессо и капучино · Тихая работа · Премиальный дизайн</p>
-        <div class="actions">
-          <a class="btn" href="/pages/c/coffee.html">Смотреть кофемашины</a>
-          <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide hero" style="--bg:url('/assets/slider/2.jpg')">
-      <div class="slide-content">
-        <h2>Чистота без лишних усилий</h2>
-        <p class="muted">Моющий модуль · Самоочистка · Минимум ухода</p>
-        <div class="actions">
-          <a class="btn" href="/pages/c/vacuums.html">К пылесосам</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide hero" style="--bg:url('/assets/slider/3.jpg')">
-      <div class="slide-content">
-        <h2>Тёплый дом круглый год</h2>
-        <p class="muted">Термостат · Тихий режим · Безопасность</p>
-        <div class="actions">
-          <a class="btn" href="/pages/c/heaters.html">К обогревателям</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide hero" style="--bg:url('/assets/slider/4.jpg')">
-      <div class="slide-content">
-        <h2>Быстро и полезно каждый день</h2>
-        <p class="muted">Циркуляция воздуха · Хрустящая корочка · Здоровое питание</p>
-        <div class="actions">
-          <a class="btn" href="/pages/c/airgrills.html">К аэрогрилям</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="arrow prev" aria-label="Предыдущий" id="prev">‹</button>
-  <button class="arrow next" aria-label="Следующий" id="next">›</button>
-  <div class="dots" id="dots" aria-hidden="true"></div>
-</section>
-<!-- Преимущества -->
-    <section>
-      <h2>Преимущества</h2>
-      <div class="grid g3">
-        <div class="card"><strong>☕ Автоэспрессо и капучино</strong><br><span class="muted">Один клик — идеальный напиток</span></div>
-        <div class="card"><strong>🧼 Самоочистка</strong><br><span class="muted">Минимум ухода — максимум ресурса</span></div>
-        <div class="card"><strong>🔇 Тихая работа</strong><br><span class="muted">Комфортное утро без шума</span></div>
-        <div class="card"><strong>🎛️ Индивидуальные настройки</strong><br><span class="muted">Температура, крепость, помол</span></div>
-        <div class="card"><strong>🛡️ Гарантия 24 мес</strong><br><span class="muted">Официальная поддержка</span></div>
-        <div class="card"><strong>🇩🇪 Дизайн Heizenker</strong><br><span class="muted">Премиальный внешний вид</span></div>
+    <!-- СЛАЙДЕР на всю ширину -->
+    <section class="slider full-bleed" aria-label="Галерея Heizenker">
+      <div class="slider-container">
+        <div class="slide active"><img src="/assets/slider/1.jpg" alt="Heizenker техника 1" /></div>
+        <div class="slide"><img src="/assets/slider/2.jpg" alt="Heizenker техника 2" /></div>
+        <div class="slide"><img src="/assets/slider/3.jpg" alt="Heizenker техника 3" /></div>
+        <div class="slide"><img src="/assets/slider/4.jpg" alt="Heizenker техника 4" /></div>
+        <button class="prev" aria-label="Предыдущий">‹</button>
+        <button class="next" aria-label="Следующий">›</button>
       </div>
     </section>
-    <!-- Хиты продаж -->
-<section>
-  <h2>Хиты продаж</h2>
-  <div class="grid g3">
-    <div class="card">
-      <div class="muted">Модель</div><h3>Heizenker HZ-C1</h3>
-      <div class="muted">Эспрессо/капучино • Бак 1.8 л • 19 бар</div>
-      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-        <a class="btn" href="/products/hz-c1.html">Подробнее</a>
-        <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="muted">Модель</div><h3>Heizenker HZ-C2</h3>
-      <div class="muted">Двойной бойлер • Молочная система</div>
-      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-        <a class="btn" href="/products/hz-c2.html">Подробнее</a>
-        <a class="btn ghost" href="https://www.ozon.ru/" target="_blank" rel="noopener">Купить на Ozon</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="muted">Модель</div><h3>Heizenker HZ-C3</h3>
-      <div class="muted">Профиль температуры • Память рецептов</div>
-      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-        <a class="btn" href="/products/hz-c3.html">Подробнее</a>
-        <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на WB</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- О бренде -->
-<section>
-  <h2>О бренде</h2>
-  <p class="muted" style="max-width:840px">
-    Heizenker — техника для дома с акцентом на комфорт и надёжность.
-    Инженерный подход и премиальный дизайн — чтобы каждый день был удобнее.
-  </p>
-</section>
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="wrap">
+      <h2>Преимущества</h2>
+      <div class="grid g3">
+        <div class="card"><strong>Автоэспрессо и капучино</strong><br><span class="muted">Один клик — идеальный напиток</span></div>
+        <div class="card"><strong>Самоочистка</strong><br><span class="muted">Минимум ухода — максимум ресурса</span></div>
+        <div class="card"><strong>Тихая работа</strong><br><span class="muted">Комфорт без шума</span></div>
+        <div class="card"><strong>Индивидуальные настройки</strong><br><span class="muted">Температура, крепость, помол</span></div>
+        <div class="card"><strong>Гарантия 24 мес</strong><br><span class="muted">Официальная поддержка</span></div>
+        <div class="card"><strong>Дизайн Heizenker</strong><br><span class="muted">Премиальный внешний вид</span></div>
+      </div>
+    </section>
+
+    <!-- тут дальше можешь добавить "Хиты продаж" и т.п. -->
+
   </main>
 
-  <footer id="site-footer"></footer>
+  <footer class="wrap footer">
+    <small>© Heizenker</small>
+    <div class="links">
+      <a href="/pages/warranty.html">Гарантия</a> ·
+      <a href="/legal/privacy.html">Политика конфиденциальности</a>
+    </div>
+  </footer>
 
-  <!-- Скрипт для мобилы (раскрытие по нажатию) -->
-  <script>
-  (function(){
-    const wrap = document.getElementById('hero-catalog');
-    if(!wrap) return;
-    const btn  = document.getElementById('hero-catalog-btn');
-    const tog  = wrap.querySelector('.catalog-toggle');
-
-    // стрелка ▼ раскрывает меню на мобиле
-    tog?.addEventListener('click', function(e){
-      e.preventDefault();
-      wrap.classList.toggle('open');
-      tog.setAttribute('aria-expanded', wrap.classList.contains('open') ? 'true' : 'false');
-    });
-
-    // первый тап по зелёной кнопке на мобиле — раскрывает, второй — переходит
-    btn?.addEventListener('click', function(e){
-      if (window.matchMedia('(max-width:768px)').matches && !wrap.classList.contains('open')) {
-        e.preventDefault(); wrap.classList.add('open');
-      }
-    });
-
-    // клик вне — закрыть (мобила)
-    document.addEventListener('click', (ev)=>{
-      if (!wrap.contains(ev.target) && window.matchMedia('(max-width:768px)').matches){
-        wrap.classList.remove('open');
-      }
-    });
-  })();
-  </script>
-
-<script>
-(function(){
-  const wrap = document.getElementById('slides');
-  if(!wrap) return;
-  const prev = document.getElementById('prev');
-  const next = document.getElementById('next');
-  const dotsWrap = document.getElementById('dots');
-  const total = wrap.children.length;
-  let i = 0, timer;
-
-  for (let k=0;k<total;k++){
-    const b = document.createElement('button');
-    b.setAttribute('aria-label','Слайд ' + (k+1));
-    dotsWrap.appendChild(b);
-  }
-  const dots = Array.from(dotsWrap.children);
-
-  function go(n){
-    i = (n + total) % total;
-    wrap.style.transform = `translateX(-${i*100}%)`;
-    dots.forEach((d,idx)=>d.classList.toggle('active', idx===i));
-    reset();
-  }
-  function reset(){
-    clearInterval(timer);
-    timer = setInterval(()=>go(i+1), 5000);
-  }
-  prev?.addEventListener('click', ()=>go(i-1));
-  next?.addEventListener('click', ()=>go(i+1));
-  dots.forEach((d,idx)=>d.addEventListener('click', ()=>go(idx)));
-  go(0);
-})();
-</script>
-
+  <!-- Подключаем скрипты в самом конце -->
+  <script src="/assets/include.js"></script>
 </body>
 </html>
