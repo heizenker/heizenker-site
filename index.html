@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Heizenker — премиальная бытовая техника</title>
-  <meta name="description" content="Современные решения для уюта и комфорта. Кофемашины, моющие пылесосы, обогреватели и аэрогрили." />
+  <meta name="description" content="Современные решения для уюта и комфорта. Кофемашины, моющие пылесосы, обогреватели и аэрогрили.">
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
@@ -29,18 +29,34 @@
 
   <main>
 
-    <!-- ГЕРОЙ -->
-    <section class="wrap hero">
-      <h1>Премиальная бытовая техника для дома</h1>
-      <p class="lead">Современные решения для уюта и комфорта</p>
-      <div class="actions">
-        <a class="btn" href="/pages/c/coffee.html">Смотреть каталог</a>
-        <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">Купить на Wildberries</a>
-      </div>
-    </section>
+    <!-- ГЕРОЙ + СЛАЙДЕР: картинка на фоне, текст сверху -->
+    <section class="hero-slider full-bleed" aria-label="Галерея Heizenker">
+      <!-- overlay с текстом -->
+      <div class="overlay">
+        <div class="wrap">
+          <h1>Премиальная бытовая техника для дома</h1>
+          <p class="lead">Современные решения для уюта и комфорта</p>
 
-    <!-- СЛАЙДЕР на всю ширину -->
-    <section class="slider full-bleed" aria-label="Галерея Heizenker">
+          <div class="actions">
+            <!-- кнопка с выпадающим меню -->
+            <div class="catalog-wrap">
+              <a class="btn catalog-btn" href="/pages/c/coffee.html">Смотреть каталог</a>
+              <div class="catalog-menu" role="menu" aria-label="Категории">
+                <a href="/pages/c/coffee.html">Кофемашины</a>
+                <a href="/pages/c/vacuums.html">Моющие пылесосы</a>
+                <a href="/pages/c/heaters.html">Обогреватели</a>
+                <a href="/pages/c/airgrills.html">Аэрогрили</a>
+              </div>
+            </div>
+
+            <a class="btn ghost" href="https://www.wildberries.ru/" target="_blank" rel="noopener">
+              Купить на Wildberries
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- сам слайдер под текстом -->
       <div class="slider-container">
         <div class="slide active"><img src="/assets/slider/1.jpg" alt="Heizenker техника 1" /></div>
         <div class="slide"><img src="/assets/slider/2.jpg" alt="Heizenker техника 2" /></div>
@@ -64,7 +80,24 @@
       </div>
     </section>
 
-    <!-- тут дальше можешь добавить "Хиты продаж" и т.п. -->
+    <!-- ХИТЫ ПРОДАЖ -->
+    <section class="wrap hits">
+      <h2>Хиты продаж</h2>
+      <div class="grid g3">
+        <a class="prod" href="/products/hz-c3.html">
+          <img src="/assets/slider/3.jpg" alt="Кофемашина Heizenker" />
+          <div class="p-title">Кофемашина HZ-C3</div>
+        </a>
+        <a class="prod" href="/pages/c/vacuums.html">
+          <img src="/assets/slider/2.jpg" alt="Моющий пылесос Heizenker" />
+          <div class="p-title">Моющий пылесос</div>
+        </a>
+        <a class="prod" href="/pages/c/heaters.html">
+          <img src="/assets/slider/4.jpg" alt="Обогреватель Heizenker" />
+          <div class="p-title">Обогреватель</div>
+        </a>
+      </div>
+    </section>
 
   </main>
 
@@ -76,7 +109,6 @@
     </div>
   </footer>
 
-  <!-- Подключаем скрипты в самом конце -->
   <script src="/assets/include.js"></script>
 </body>
 </html>
