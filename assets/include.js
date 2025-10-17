@@ -1,44 +1,28 @@
-async function inject(id, url) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const res = await fetch(url, { cache: "no-store" });
-  el.innerHTML = await res.text();
-}
+/* ========= Слайдер (автопрокрутка + стрелки) ========= */
+(function(){
+  let idx = 0, timer;
 
-window.addEventListener("DOMContentLoaded", () => {
-  inject("site-header", "/partials/header.html");
-  inject("site-footer", "/partials/footer.html");
-});
-// === Логика для слайдера ===
-let currentIndex = 0;
-const slides = document.querySelector('.slides');
-const slideCount = document.querySelectorAll('.slide').length;
+  function slides(){
+    return document.querySelectorAll('.slide');
+  }
+  function show(n){
+    const list = slides();
+    if (!list.length) return;
+    list.forEach(s => s.classList.remove('active'));
+    idx = (n + list.length) % list.length;
+    list[idx].classList.add('active');
+    reset();
+  }
+  function reset(){
+    clearInterval(timer);
+    timer = setInterval(()=>show(idx+1), 4500);
+  }
 
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slideCount;
-  slides.style.transform = translateX(-${currentIndex * 100}%);
-});
+  document.addEventListener('click', e=>{
+    if (e.target.closest('.prev')) { e.preventDefault(); show(idx-1); }
+    if (e.target.closest('.next')) { e.preventDefault(); show(idx+1); }
+  });
 
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-  slides.style.transform = translateX(-${currentIndex * 100}%);
-});
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let slides = document.querySelectorAll(".slide");
-  slides.forEach(slide => slide.style.display = "none");
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); // автопереключение каждые 4с
-}
-
-document.querySelector(".prev").onclick = () => {
-  slideIndex -= 2; 
-  showSlides();
-};
-document.querySelector(".next").onclick = () => {
-  showSlides();
-}
+  // старт после готовности DOM
+  document.addEventListener('DOMContentLoaded', ()=> show(0));
+})();
