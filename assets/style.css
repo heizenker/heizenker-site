@@ -198,3 +198,33 @@ small.muted {color:var(--muted)}
   .slide-content{padding:18px}
   .hero-slider h2{font-size:24px}
 }
+/* ——— full-bleed для слайдера на всю ширину экрана ——— */
+.full-bleed{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  border-radius:0;
+}
+
+/* Сделаем слайдер выше и поверх контента, но ниже шапки */
+.hero-slider{ 
+  height:52vh;           /* было 30vh */
+  min-height:360px; 
+  max-height:640px;
+  z-index:1;
+}
+
+/* Шапка всегда поверх слайдера */
+#site-header{
+  position:sticky; 
+  top:0; 
+  z-index:1000;                     /* ↑ было низко */
+  background:rgba(10,16,22,.8);     /* лёгкий фон, чтобы читался текст */
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* на мобилках пониже */
+@media (max-width:768px){
+  .hero-slider{height:36vh; min-height:220px}
+}
