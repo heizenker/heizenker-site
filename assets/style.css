@@ -228,3 +228,53 @@ small.muted {color:var(--muted)}
 @media (max-width:768px){
   .hero-slider{height:36vh; min-height:220px}
 }
+/* Стили для шапки */
+#site-header {
+  background: rgba(0,0,0,0.85);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+#site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+#site-header nav a:hover {
+  color: #ff3333;
+}
+
+/* Слайдер */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  height: 70vh; /* почти на весь экран */
+  overflow: hidden;
+}
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* растягивает красиво */
+}
+.slide.active {
+  display: block;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
