@@ -311,3 +311,32 @@ body.menu-open .mobile-panel{ transform:translateX(0) }
   }
   .burger span{ width: 100%; }
 }
+/* ===== Моб. кнопка "Смотреть каталог" в шапке ===== */
+.mobile-cta{ display:none; }
+@media (max-width: 768px){
+  .mobile-cta{ display:block; margin-left:auto; }
+  .mobile-cta .btn-sm{
+    padding:10px 14px;
+    border-radius:10px;
+    font-size:14px;
+  }
+}
+
+/* ===== Перестановка секций на мобиле: сначала ХИТЫ, потом ПРЕИМУЩЕСТВА ===== */
+@media (max-width: 768px){
+  /* превращаем контейнер main.wrap в колонку, чтобы заработал order */
+  main.wrap{
+    display:flex;
+    flex-direction:column;
+  }
+  .hits{ order:1; margin-top:12px; }   /* Сразу под слайдер */
+  .features{ order:2; }                /* Ниже */
+}
+
+/* ===== Уточнение высоты слайдера на мобиле (единое правило) ===== */
+@media (max-width: 768px){
+  .slider-container{
+    height:50vh; /* одна финальная высота на мобиле */
+    min-height:320px;
+  }
+}
