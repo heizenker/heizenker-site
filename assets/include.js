@@ -26,3 +26,34 @@
   // старт после готовности DOM
   document.addEventListener('DOMContentLoaded', ()=> show(0));
 })();
+// ====== MOBILE MENU TOGGLE ======
+(function(){
+  const burger = document.querySelector('.burger');
+  const overlay = document.querySelector('.mobile-overlay');
+  const panel   = document.querySelector('.mobile-panel');
+  const closeBtn = document.querySelector('.mp-close');
+
+  function openMenu(){
+    document.body.classList.add('menu-open');
+    if (burger) burger.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu(){
+    document.body.classList.remove('menu-open');
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+  }
+
+  if (burger){
+    burger.addEventListener('click', openMenu);
+  }
+  if (overlay){
+    overlay.addEventListener('click', closeMenu);
+  }
+  if (closeBtn){
+    closeBtn.addEventListener('click', closeMenu);
+  }
+
+  // Закрываем ESC
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === 'Escape') closeMenu();
+  });
+})();
