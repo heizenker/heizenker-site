@@ -62,3 +62,25 @@ nav{display:flex;gap:10px;flex-wrap:wrap}
   .dropdown{position:static; display:none; margin-top:8px}
   .nav-item.open .dropdown{display:block}
 }
+/* --- Dropdown на кнопке "Смотреть каталог" (главная) --- */
+.hero-catalog{position:relative;display:inline-block}
+.catalog-toggle{display:none;border:0;background:transparent;color:#cfe3f2;cursor:pointer;font-size:12px}
+.catalog-dropdown{
+  position:absolute; top:100%; left:0; min-width:260px; display:none; z-index:20;
+  background:rgba(16,24,32,.98); border:1px solid rgba(255,255,255,.12);
+  border-radius:12px; padding:10px; box-shadow:0 20px 50px rgba(0,0,0,.35)
+}
+.catalog-dropdown a{
+  display:block; padding:10px 12px; border-radius:10px; text-decoration:none; color:#e8eef4
+}
+.catalog-dropdown a:hover{background:rgba(255,255,255,.06)}
+
+/* Десктоп: по наведению */
+.hero-catalog:hover .catalog-dropdown{display:block}
+
+/* Мобила: по тапу */
+@media (max-width:768px){
+  .catalog-toggle{display:inline-block;margin-left:6px}
+  .hero-catalog:hover .catalog-dropdown{display:none} /* отключаем hover на мобиле */
+  .hero-catalog.open .catalog-dropdown{display:block}
+}
