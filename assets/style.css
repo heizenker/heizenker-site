@@ -14,7 +14,21 @@ nav a{color:#cfe3f2;text-decoration:none;margin:0 10px;opacity:.9}nav a:hover{op
 h1{font-size:44px;line-height:1.07;margin:0 0 12px;letter-spacing:-.02em}
 h2{margin:0 0 14px}
 p.lead{color:#cfe3f2;opacity:.9;max-width:720px;margin:0 0 18px}
-.btn{display:inline-block;background:var(--accent);color:#081016;padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none}
+.btn {
+  display: inline-block;
+  background: #e63946; /* Красный цвет */
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #d62828; /* Более тёмный красный при наведении */
+  transform: translateY(-2px); /* лёгкий подскок */
+}
 .btn.ghost{background:transparent;color:#e8eef4;border:1px solid rgba(255,255,255,.18)}
 .grid{display:grid;gap:16px}.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .card{border:1px solid rgba(255,255,255,.10);border-radius:16px;background:rgba(255,255,255,.03);padding:18px}
