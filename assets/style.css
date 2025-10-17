@@ -258,3 +258,56 @@ body.menu-open .mobile-panel{ transform:translateX(0) }
 @media (max-width: 992px){
   .catalog-wrap .catalog-menu{ display:none !important; }
 }
+/* ===== Мобильные правки hero-плашки и кнопок ===== */
+@media (max-width: 768px){
+  /* плашка компактнее и ниже */
+  .hero-slider .overlay .wrap{
+    right: 4%;
+    left: 4%;
+    bottom: 6%;
+    padding: 16px;
+    max-width: none;
+    background: rgba(0,0,0,.82);
+    border-radius: 12px;
+  }
+
+  /* размеры текста на плашке */
+  .hero-slider .overlay h1{
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+  }
+  .hero-slider .overlay .lead{
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 12px;
+  }
+
+  /* кнопки — в колонку и на всю ширину */
+  .actions{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .actions .btn{
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+
+  /* сам слайдер чуть ниже, чтобы «шапка» не перекрывала */
+  .slider-container{
+    height: 50vh;
+    min-height: 320px;
+  }
+}
+
+/* ===== Бургер: гарантированно показать справа на мобилке ===== */
+@media (max-width: 992px){
+  .burger{
+    display: inline-grid !important;
+    margin-left: auto;        /* уводим вправо */
+    place-content: center;
+  }
+  .burger span{ width: 100%; }
+}
