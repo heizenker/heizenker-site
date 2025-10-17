@@ -33,7 +33,15 @@
       <!-- КНОПКИ: «Смотреть каталог» + выпадающие категории, и WB -->
       <div style="display:flex;gap:10px;flex-wrap:wrap">
         <span class="hero-catalog" id="hero-catalog">
-          <a class="btn" href="/pages/catalog.html" id="hero-catalog-btn">Смотреть каталог</a>
+          <div class="dropdown">
+  <a class="btn" href="#">Смотреть каталог</a>
+  <div class="dropdown-content">
+    <a href="/pages/coffee.html">Кофемашины</a>
+    <a href="/pages/vacuum.html">Моющие пылесосы</a>
+    <a href="/pages/heaters.html">Обогреватели</a>
+    <a href="/pages/grill.html">Аэрогрили</a>
+  </div>
+</div>
           <button class="catalog-toggle" aria-label="Открыть категории">▼</button>
           <div class="catalog-dropdown" role="menu" aria-label="Категории">
             <a href="/pages/c/coffee.html">Кофемашины</a>
